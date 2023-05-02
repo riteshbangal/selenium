@@ -69,11 +69,11 @@ public class AddCustomerDemo {
 
             data = new Object[rows.size() - 1][4];
 
-            for (int i = 0; i < rows.size(); i++) {
+            for (int i = 1; i < rows.size(); i++) {
                 List<String> column = Arrays.asList(rows.get(i));
                 for (int j = 0; j < column.size(); j++) {
                     System.out.println("data : " + column.get(j));
-                    data[i][j] = column.get(j).trim();
+                    data[i-1][j] = column.get(j).trim();
                 }
             }
         } catch (Exception e) {
